@@ -2,7 +2,9 @@
 
 using namespace std;
 
-void array_sum(int x[], int y)
+template <class T>
+
+T array_sum(T x[5], int y)
 {
     int value = 0;
     for (int i = 0; i < y; i++)
@@ -10,17 +12,12 @@ void array_sum(int x[], int y)
         value = value + x[i];
     }
 
-    cout << value;
+    return value;
 }
 
 int main()
 {
-    int arr[5];
-    for (int i = 0; i < 5; i++)
-    {
-        cout << "Enter the element : ";
-        cin >> arr[i];
-    }
+    int arr[5] = {1, 2, 3, 4, 5};
 
     cout << array_sum(arr, 5);
     return 0;
